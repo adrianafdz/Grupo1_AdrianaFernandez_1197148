@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Rigidbody))]
-public class MovimientoPlayer : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     Vector3 position;
     float horizontal;
