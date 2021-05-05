@@ -21,7 +21,7 @@ public class PowerSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(15);
             Instantiate(prefab, new Vector3(Random.Range(-8, 8), 6, 0), Quaternion.identity);
         }
     }

@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        StartCoroutine("reiniciarEscalado");
         puntos = 0;
     }
 
@@ -53,16 +52,14 @@ public class PlayerController : MonoBehaviour
         } else if (other.tag == "Power")
         {
             transform.localScale = new Vector3(transform.localScale.x * 2, 1, 1);
+            StartCoroutine("reiniciarEscalado");
         }
     }
 
     IEnumerator reiniciarEscalado()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(6);
-            transform.localScale = new Vector3(2, 1, 1);
-        }
+        yield return new WaitForSeconds(6);
+        transform.localScale = new Vector3(2, 1, 1);
     }
 
 }

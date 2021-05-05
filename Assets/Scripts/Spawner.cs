@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1);
-            int i = Random.Range(1, 5);
+            int i = Random.Range(1, 8);
             if (i == 1)
             {
                 Instantiate(powerPrefab, new Vector3(Random.Range(-8, 8), 6, 0), Quaternion.identity);
