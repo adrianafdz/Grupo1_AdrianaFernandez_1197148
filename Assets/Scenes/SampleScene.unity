@@ -314,7 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee938cc4ab1296446a11125346bb7426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   puntaje: {fileID: 1743240379}
   vidasText: {fileID: 1859532980}
 --- !u!1 &705507993
