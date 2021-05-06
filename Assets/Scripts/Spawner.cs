@@ -6,10 +6,13 @@ public class Spawner : MonoBehaviour
 {
     public GameObject rockPrefab;
     public GameObject powerPrefab;
+    public GameObject meteorPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("Instanciar");
+        StartCoroutine("InstanciarMeteorito");
     }
 
     // Update is called once per frame
@@ -31,6 +34,15 @@ public class Spawner : MonoBehaviour
             {
                 Instantiate(rockPrefab, new Vector3(Random.Range(-8, 8), 6, 0), Quaternion.identity);
             }
+        }
+    }
+
+    IEnumerator InstanciarMeteorito()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(4);
+            Instantiate(meteorPrefab, new Vector3(Random.Range(-8, 8), 6, 0), Quaternion.identity);
         }
     }
 }
